@@ -30,6 +30,8 @@ def load_report(report_id: str):
 
 def save_report(report_id: str, report: dict):
 
+    os.makedirs(JSON_FOLDER, exist_ok=True)
+
     file_path = get_json_path(report_id)
 
     with open(
@@ -60,6 +62,9 @@ def delete_report_file(report_id: str):
 
 def load_all_reports():
 
+    if not os.path.exists(JSON_FOLDER):
+        return []
+
     reports = []
 
     for filename in sorted(os.listdir(JSON_FOLDER)):
@@ -71,7 +76,6 @@ def load_all_reports():
             report = load_report(report_id)
 
             if report:
-
                 reports.append(report)
 
     return reports
