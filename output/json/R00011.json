@@ -1,0 +1,158 @@
+{
+    "patient": {
+        "patient_id": "P00011",
+        "report_id": "R00011",
+        "name": "Hassan Mirza",
+        "age": 49,
+        "gender": "Male",
+        "phone": "03603062988",
+        "doctor": "Dr. Bilal Ahmed"
+    },
+    "condition": "Thrombocytopenia",
+    "severity": "Moderate",
+    "abnormal_parameters": [
+        "Platelets"
+    ],
+    "cbc": [
+        {
+            "parameter": "Hemoglobin",
+            "value": 14.4,
+            "reference": [
+                13.5,
+                17.5
+            ],
+            "unit": "g/dL",
+            "status": "Normal"
+        },
+        {
+            "parameter": "WBC",
+            "value": 5260,
+            "reference": [
+                4000,
+                11000
+            ],
+            "unit": "/cumm",
+            "status": "Normal"
+        },
+        {
+            "parameter": "RBC",
+            "value": 5.2,
+            "reference": [
+                4.5,
+                5.9
+            ],
+            "unit": "million/cumm",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Platelets",
+            "value": 78994,
+            "reference": [
+                150000,
+                450000
+            ],
+            "unit": "/cumm",
+            "status": "Low"
+        },
+        {
+            "parameter": "MCV",
+            "value": 92.6,
+            "reference": [
+                80,
+                100
+            ],
+            "unit": "fL",
+            "status": "Normal"
+        },
+        {
+            "parameter": "MCH",
+            "value": 29.7,
+            "reference": [
+                27,
+                33
+            ],
+            "unit": "pg",
+            "status": "Normal"
+        },
+        {
+            "parameter": "MCHC",
+            "value": 35.7,
+            "reference": [
+                32,
+                36
+            ],
+            "unit": "g/dL",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Hematocrit",
+            "value": 47.5,
+            "reference": [
+                41,
+                53
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "RDW",
+            "value": 12.2,
+            "reference": [
+                11.5,
+                14.5
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Neutrophils",
+            "value": 46,
+            "reference": [
+                40,
+                80
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Lymphocytes",
+            "value": 33,
+            "reference": [
+                20,
+                40
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Monocytes",
+            "value": 2,
+            "reference": [
+                2,
+                10
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Eosinophils",
+            "value": 4,
+            "reference": [
+                1,
+                6
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Basophils",
+            "value": 0,
+            "reference": [
+                0,
+                1
+            ],
+            "unit": "%",
+            "status": "Normal"
+        }
+    ]
+}

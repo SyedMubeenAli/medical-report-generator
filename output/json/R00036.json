@@ -1,0 +1,163 @@
+{
+    "patient": {
+        "patient_id": "P00036",
+        "report_id": "R00036",
+        "name": "Sana Ansari",
+        "age": 26,
+        "gender": "Female",
+        "phone": "03730896527",
+        "doctor": "Dr. Ayesha Khan"
+    },
+    "condition": "Iron Deficiency",
+    "severity": "Moderate",
+    "abnormal_parameters": [
+        "Hemoglobin",
+        "RBC",
+        "MCV",
+        "MCH",
+        "MCHC",
+        "RDW"
+    ],
+    "cbc": [
+        {
+            "parameter": "Hemoglobin",
+            "value": 10.6,
+            "reference": [
+                12.0,
+                15.5
+            ],
+            "unit": "g/dL",
+            "status": "Low"
+        },
+        {
+            "parameter": "WBC",
+            "value": 5681,
+            "reference": [
+                4000,
+                11000
+            ],
+            "unit": "/cumm",
+            "status": "Normal"
+        },
+        {
+            "parameter": "RBC",
+            "value": 3.2,
+            "reference": [
+                4.1,
+                5.1
+            ],
+            "unit": "million/cumm",
+            "status": "Low"
+        },
+        {
+            "parameter": "Platelets",
+            "value": 270413,
+            "reference": [
+                150000,
+                450000
+            ],
+            "unit": "/cumm",
+            "status": "Normal"
+        },
+        {
+            "parameter": "MCV",
+            "value": 77.1,
+            "reference": [
+                80,
+                100
+            ],
+            "unit": "fL",
+            "status": "Low"
+        },
+        {
+            "parameter": "MCH",
+            "value": 21.9,
+            "reference": [
+                27,
+                33
+            ],
+            "unit": "pg",
+            "status": "Low"
+        },
+        {
+            "parameter": "MCHC",
+            "value": 29.4,
+            "reference": [
+                32,
+                36
+            ],
+            "unit": "g/dL",
+            "status": "Low"
+        },
+        {
+            "parameter": "Hematocrit",
+            "value": 26.1,
+            "reference": [
+                36,
+                46
+            ],
+            "unit": "%",
+            "status": "Low"
+        },
+        {
+            "parameter": "RDW",
+            "value": 15.9,
+            "reference": [
+                11.5,
+                14.5
+            ],
+            "unit": "%",
+            "status": "High"
+        },
+        {
+            "parameter": "Neutrophils",
+            "value": 57,
+            "reference": [
+                40,
+                80
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Lymphocytes",
+            "value": 35,
+            "reference": [
+                20,
+                40
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Monocytes",
+            "value": 8,
+            "reference": [
+                2,
+                10
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Eosinophils",
+            "value": 1,
+            "reference": [
+                1,
+                6
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Basophils",
+            "value": 0,
+            "reference": [
+                0,
+                1
+            ],
+            "unit": "%",
+            "status": "Normal"
+        }
+    ]
+}

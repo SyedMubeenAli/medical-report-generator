@@ -1,0 +1,36 @@
+{
+    "total_reports": 50,
+    "gender_distribution": {
+        "Female": 27,
+        "Male": 23
+    },
+    "condition_distribution": {
+        "Leukocytosis": 8,
+        "Leukopenia": 8,
+        "Iron Deficiency": 8,
+        "Normal": 10,
+        "Viral Infection": 8,
+        "Thrombocytopenia": 8
+    },
+    "severity_distribution": {
+        "Moderate": 40,
+        "Normal": 10
+    },
+    "age_statistics": {
+        "minimum": 18,
+        "maximum": 72,
+        "average": 46.62
+    },
+    "abnormal_parameters": {
+        "WBC": 24,
+        "Neutrophils": 8,
+        "Hemoglobin": 8,
+        "RBC": 8,
+        "MCV": 8,
+        "MCH": 8,
+        "MCHC": 8,
+        "RDW": 8,
+        "Lymphocytes": 8,
+        "Platelets": 8
+    }
+}

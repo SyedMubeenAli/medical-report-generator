@@ -1,0 +1,158 @@
+{
+    "patient": {
+        "patient_id": "P00002",
+        "report_id": "R00002",
+        "name": "Ali Malik",
+        "age": 30,
+        "gender": "Male",
+        "phone": "03011218344",
+        "doctor": "Dr. Bilal Ahmed"
+    },
+    "condition": "Leukopenia",
+    "severity": "Moderate",
+    "abnormal_parameters": [
+        "WBC"
+    ],
+    "cbc": [
+        {
+            "parameter": "Hemoglobin",
+            "value": 15.0,
+            "reference": [
+                13.5,
+                17.5
+            ],
+            "unit": "g/dL",
+            "status": "Normal"
+        },
+        {
+            "parameter": "WBC",
+            "value": 3370,
+            "reference": [
+                4000,
+                11000
+            ],
+            "unit": "/cumm",
+            "status": "Low"
+        },
+        {
+            "parameter": "RBC",
+            "value": 5.0,
+            "reference": [
+                4.5,
+                5.9
+            ],
+            "unit": "million/cumm",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Platelets",
+            "value": 227358,
+            "reference": [
+                150000,
+                450000
+            ],
+            "unit": "/cumm",
+            "status": "Normal"
+        },
+        {
+            "parameter": "MCV",
+            "value": 93.9,
+            "reference": [
+                80,
+                100
+            ],
+            "unit": "fL",
+            "status": "Normal"
+        },
+        {
+            "parameter": "MCH",
+            "value": 28.5,
+            "reference": [
+                27,
+                33
+            ],
+            "unit": "pg",
+            "status": "Normal"
+        },
+        {
+            "parameter": "MCHC",
+            "value": 32.8,
+            "reference": [
+                32,
+                36
+            ],
+            "unit": "g/dL",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Hematocrit",
+            "value": 44.5,
+            "reference": [
+                41,
+                53
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "RDW",
+            "value": 13.1,
+            "reference": [
+                11.5,
+                14.5
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Neutrophils",
+            "value": 51,
+            "reference": [
+                40,
+                80
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Lymphocytes",
+            "value": 31,
+            "reference": [
+                20,
+                40
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Monocytes",
+            "value": 5,
+            "reference": [
+                2,
+                10
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Eosinophils",
+            "value": 4,
+            "reference": [
+                1,
+                6
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Basophils",
+            "value": 0,
+            "reference": [
+                0,
+                1
+            ],
+            "unit": "%",
+            "status": "Normal"
+        }
+    ]
+}

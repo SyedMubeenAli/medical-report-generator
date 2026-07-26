@@ -1,0 +1,159 @@
+{
+    "patient": {
+        "patient_id": "P00007",
+        "report_id": "R00007",
+        "name": "Noor Sheikh",
+        "age": 42,
+        "gender": "Female",
+        "phone": "03723572278",
+        "doctor": "Dr. Ayesha Khan"
+    },
+    "condition": "Viral Infection",
+    "severity": "Moderate",
+    "abnormal_parameters": [
+        "WBC",
+        "Lymphocytes"
+    ],
+    "cbc": [
+        {
+            "parameter": "Hemoglobin",
+            "value": 15.3,
+            "reference": [
+                12.0,
+                15.5
+            ],
+            "unit": "g/dL",
+            "status": "Normal"
+        },
+        {
+            "parameter": "WBC",
+            "value": 1649,
+            "reference": [
+                4000,
+                11000
+            ],
+            "unit": "/cumm",
+            "status": "Low"
+        },
+        {
+            "parameter": "RBC",
+            "value": 4.9,
+            "reference": [
+                4.1,
+                5.1
+            ],
+            "unit": "million/cumm",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Platelets",
+            "value": 371794,
+            "reference": [
+                150000,
+                450000
+            ],
+            "unit": "/cumm",
+            "status": "Normal"
+        },
+        {
+            "parameter": "MCV",
+            "value": 82.9,
+            "reference": [
+                80,
+                100
+            ],
+            "unit": "fL",
+            "status": "Normal"
+        },
+        {
+            "parameter": "MCH",
+            "value": 29.3,
+            "reference": [
+                27,
+                33
+            ],
+            "unit": "pg",
+            "status": "Normal"
+        },
+        {
+            "parameter": "MCHC",
+            "value": 33.7,
+            "reference": [
+                32,
+                36
+            ],
+            "unit": "g/dL",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Hematocrit",
+            "value": 36.1,
+            "reference": [
+                36,
+                46
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "RDW",
+            "value": 12.0,
+            "reference": [
+                11.5,
+                14.5
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Neutrophils",
+            "value": 45,
+            "reference": [
+                40,
+                80
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Lymphocytes",
+            "value": 51,
+            "reference": [
+                20,
+                40
+            ],
+            "unit": "%",
+            "status": "High"
+        },
+        {
+            "parameter": "Monocytes",
+            "value": 5,
+            "reference": [
+                2,
+                10
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Eosinophils",
+            "value": 3,
+            "reference": [
+                1,
+                6
+            ],
+            "unit": "%",
+            "status": "Normal"
+        },
+        {
+            "parameter": "Basophils",
+            "value": 0,
+            "reference": [
+                0,
+                1
+            ],
+            "unit": "%",
+            "status": "Normal"
+        }
+    ]
+}
