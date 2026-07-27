@@ -22,7 +22,7 @@ from src.api.models.message_models import MessageResponse
 
 router = APIRouter(
     prefix="/reports",
-    tags=["Reports"]
+    tags=["Medical Reports"]
 )
 
 from src.ai.predictor import predict_condition
@@ -30,7 +30,19 @@ from src.ai.predictor import predict_condition
 
 @router.get(
     "/",
-    response_model=ReportListResponse
+    response_model=ReportListResponse,
+    summary="Get All Medical Reports",
+    description="""
+Retrieve all generated CBC reports.
+
+Supports:
+
+- Pagination
+- Patient name filtering
+- Medical condition filtering
+- Sorting
+- Ascending and descending order
+"""
 )
 
 def read_all_reports( 
@@ -72,14 +84,23 @@ def read_all_reports(
 
     }
 
-@router.get("/stats")
+@router.get(
+    "/stats",
+    summary="Get Report Statistics",
+    description="Returns overall statistics for all generated medical reports."
+)
 
 def read_statistics():
 
     return get_statistics()
 
 
-@router.get("/{report_id}")
+@router.get(
+    "/{report_id}",
+    summary="Get Report by ID",
+    description="Retrieve a single medical report using its unique Report ID."
+)
+
 def read_report(report_id: str):
 
     report = get_report(report_id)
@@ -93,7 +114,11 @@ def read_report(report_id: str):
 
     return report
 
-@router.put("/{report_id}")
+@router.put(
+    "/{report_id}",
+    summary="Update Existing Report",
+    description="Update an existing medical report."
+)
 
 def update_existing_report(
     report_id: str,
@@ -117,8 +142,12 @@ def update_existing_report(
 
 @router.delete(
     "/{report_id}",
-    response_model=MessageResponse
+    response_model=MessageResponse,
+    summary="Delete Report",
+    description="Delete a medical report using its Report ID."
 )
+
+
 def remove_report(report_id: str):
 
     success = delete_report(report_id)
@@ -137,8 +166,14 @@ def remove_report(report_id: str):
 
 @router.post(
     "/analyze",
-    response_model=PredictionResponse
+    response_model=PredictionResponse,
+    summary="Analyze CBC Report",
+    description="""
+Predict the most likely medical condition from CBC parameters using the trained Machine Learning model.
+"""
 )
+
+
 def analyze_report(data: CBCInput):
 
     prediction = predict_condition(

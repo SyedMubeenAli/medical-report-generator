@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/images/github-banner.png" alt="AI-Powered Medical Report Generator Banner">
+</p>
+
 # 🩺 AI-Powered Medical Report Generator
 
 An end-to-end AI-powered medical report generation system built with Python and FastAPI.
