@@ -88,7 +88,8 @@ def home():
     return {
         "success": True,
         "message": "AI-Powered Medical Report Generator API is running",
-        "api_version": settings.API_VERSION,
+        "version": settings.API_VERSION,
+        "api_version": "v1",
         "documentation": "/docs",
         "redoc": "/redoc",
         "base_url": "/api/v1",

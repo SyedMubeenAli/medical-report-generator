@@ -8,6 +8,8 @@ __pycache__/
 .venv/
 venv/
 env/
+test_env/
+clean_env/
 
 # Pytest
 .pytest_cache/
@@ -51,3 +53,11 @@ htmlcov/
 # Temporary files
 *.tmp
 *.bak
+
+
+# Test virtual environments
+test_env/
+clean_env/
+
+# Python bytecode
+*.pyc
