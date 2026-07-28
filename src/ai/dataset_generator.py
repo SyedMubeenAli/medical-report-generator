@@ -3,7 +3,6 @@ import random
 
 import pandas as pd
 
-
 OUTPUT_FOLDER = "data/datasets"
 OUTPUT_FILE = os.path.join(OUTPUT_FOLDER, "cbc_dataset.csv")
 

@@ -3,7 +3,6 @@ from cbc_reference import CBC_REFERENCE
 
 class ValidationError(Exception):
     """Raised when a report contains invalid data."""
-    pass
 
 
 def validate_age(age):
@@ -42,13 +41,13 @@ def validate_cbc(report):
 
             if gender.lower() in reference:
 
-                low, high = reference[
+                _, high = reference[
                     gender.lower()
                 ]["normal"]
 
             else:
 
-                low, high = reference["normal"]
+                _, high = reference["normal"]
 
         else:
 

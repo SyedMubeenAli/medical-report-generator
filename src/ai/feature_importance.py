@@ -1,6 +1,5 @@
 from src.ai.model_loader import model
 
-
 FEATURE_NAMES = [
     "Age",
     "Gender",

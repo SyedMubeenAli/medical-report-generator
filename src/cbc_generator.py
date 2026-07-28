@@ -1,9 +1,8 @@
 import random
 
-from patient_generator import generate_patient
 from conditions import CBC_CONDITIONS
-
 from generators.dispatcher import GENERATOR_MAP
+from patient_generator import generate_patient
 
 
 def generate_condition():

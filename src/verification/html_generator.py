@@ -1,5 +1,7 @@
 import os
+
 from security.digital_signature import generate_signature
+
 
 def generate_verification_page(report):
 

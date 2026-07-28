@@ -1,5 +1,6 @@
-from faker import Faker
 import random
+
+from faker import Faker
 
 fake = Faker("en_US")
 

@@ -1,11 +1,12 @@
 from collections import Counter
 
 from src.api.repositories.report_repository import (
-    load_report,
+    delete_report_file,
     load_all_reports,
+    load_report,
     save_report,
-    delete_report_file
 )
+from src.logger import logger
 
 
 def get_report(report_id: str):
@@ -14,10 +15,10 @@ def get_report(report_id: str):
 
 
 def get_all_reports(
-    patient: str = None,
-    condition: str = None,
-    sort_by: str = None,
-    order: str = "asc"
+    patient: str | None = None,
+    condition: str | None = None,
+    sort_by: str | None = None,
+    order: str = "asc",
 ):
 
     all_reports = load_all_reports()
@@ -29,15 +30,11 @@ def get_all_reports(
         patient_name = report["patient"]["name"]
         report_condition = report["condition"]
 
-        if patient:
+        if patient and patient.lower() not in patient_name.lower():
+            continue
 
-            if patient.lower() not in patient_name.lower():
-                continue
-
-        if condition:
-
-            if condition.lower() != report_condition.lower():
-                continue
+        if condition and condition.lower() != report_condition.lower():
+            continue
 
         reports.append({
 
@@ -69,6 +66,8 @@ def get_all_reports(
                 reverse=reverse
             )
 
+        logger.info("Retrieved %d reports", len(reports))
+
     return reports
 
 
@@ -91,6 +90,8 @@ def get_statistics():
 
     average_age = round(total_age / total_reports, 1) if total_reports else 0
 
+    logger.info("Statistics generated successfully")
+
     return {
 
         "total_reports": total_reports,
@@ -103,8 +104,12 @@ def get_statistics():
 
 
 def delete_report(report_id: str):
+    deleted = delete_report_file(report_id)
 
-    return delete_report_file(report_id)
+    if deleted:
+        logger.info("Report deleted: %s", report_id)
+
+    return deleted
 
 
 def update_report(report_id: str, updated_data: dict):
@@ -122,5 +127,7 @@ def update_report(report_id: str, updated_data: dict):
     report["severity"] = updated_data["severity"]
 
     save_report(report_id, report)
+
+    logger.info("Report updated: %s", report_id)
 
     return report

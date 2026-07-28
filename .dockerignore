@@ -41,3 +41,7 @@ dist/
 
 # Notebook
 .ipynb_checkpoints/
+
+.coverage
+.ruff_cache/
+htmlcov/

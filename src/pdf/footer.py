@@ -1,7 +1,7 @@
-from datetime import datetime
-from reportlab.platypus import Paragraph
-from reportlab.lib.styles import getSampleStyleSheet
+from datetime import datetime, timezone
 
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import Paragraph
 
 styles = getSampleStyleSheet()
 
@@ -54,7 +54,7 @@ def add_footer(story):
 
     story.append(
         Paragraph(
-            f"Generated On : {datetime.now().strftime('%d-%b-%Y %I:%M %p')}",
+            f"Generated On : {datetime.now(timezone.utc).strftime('%d-%b-%Y %I:%M %p')}",
             styles["BodyText"]
         )
     )

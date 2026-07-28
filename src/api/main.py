@@ -1,11 +1,25 @@
-from fastapi import FastAPI
-
-from src.api.routes.report_routes import router as report_router
-
+from fastapi import FastAPI, HTTPException
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 
+from src.api.models.message_models import (
+    HealthResponse,
+    HomeResponse,
+)
+from src.api.router import api_router
+from src.core.handlers import (
+    http_exception_handler,
+    unhandled_exception_handler,
+    validation_exception_handler,
+)
+from src.core.middleware import RequestLoggingMiddleware
+from src.core.security import SecurityHeadersMiddleware
+from src.core.settings import settings
+
+
+
 app = FastAPI(
-    title="AI-Powered Medical Report Generator API",
+    title=settings.PROJECT_NAME,
     description="""
 A production-ready REST API for generating, managing, and analyzing Complete Blood Count (CBC) medical reports.
 
@@ -21,7 +35,7 @@ A production-ready REST API for generating, managing, and analyzing Complete Blo
 
 Developed using FastAPI and Machine Learning.
 """,
-    version="1.0.0",
+    version=settings.API_VERSION,
     contact={
         "name": "Syed Mubeen Ali",
         "url": "https://github.com/SyedMubeenAli",
@@ -34,7 +48,22 @@ Developed using FastAPI and Machine Learning.
     redoc_url="/redoc"
 )
 
-app.include_router(report_router)
+app.add_exception_handler(
+    HTTPException,
+    http_exception_handler,
+)
+
+app.add_exception_handler(
+    RequestValidationError,
+    validation_exception_handler,
+)
+
+app.add_exception_handler(
+    Exception,
+    unhandled_exception_handler,
+)
+
+app.include_router(api_router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -44,9 +73,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.add_middleware(RequestLoggingMiddleware)
+
+app.add_middleware(SecurityHeadersMiddleware)
 
 @app.get(
     "/",
+    response_model=HomeResponse,
     tags=["Home"],
     summary="API Status",
     description="Returns the current status of the API."
@@ -55,22 +88,23 @@ def home():
     return {
         "success": True,
         "message": "AI-Powered Medical Report Generator API is running",
-        "version": "1.0.0",
-        "docs": "/docs",
-        "redoc": "/redoc"
+        "api_version": settings.API_VERSION,
+        "documentation": "/docs",
+        "redoc": "/redoc",
+        "base_url": "/api/v1",
     }
 
 
 @app.get(
     "/health",
+    response_model=HealthResponse,
     tags=["Health"],
     summary="Health Check",
     description="Returns the health status of the API."
 )
 def health():
-
     return {
         "status": "healthy",
         "service": "AI-Powered Medical Report Generator API",
-        "version": "1.0.0"
+        "api_version": settings.API_VERSION,
     }

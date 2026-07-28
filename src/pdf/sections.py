@@ -1,8 +1,7 @@
-from reportlab.platypus import Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import Paragraph, Spacer
 
 from config import *
-
 
 styles = getSampleStyleSheet()
 

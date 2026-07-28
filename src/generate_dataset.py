@@ -1,21 +1,17 @@
 import random
 
-from patient_generator import generate_patient
-from cbc_generator import generate_cbc
-from export_json import export_reports_to_json
-
-from csv_generator import export_csv
-from pdf_generator import generate_pdf
-
-from logger import logger
-
-from validators.report_validator import validate_report
+from analytics.charts import generate_charts
 from analytics.dataset_analysis import analyze_dataset
 from analytics.export_analysis import export_dataset_analysis
-from analytics.charts import generate_charts
+from cbc_generator import generate_cbc
+from csv_generator import export_csv
+from export_json import export_reports_to_json
+from logger import logger
+from patient_generator import generate_patient
+from pdf_generator import generate_pdf
 from qr_generator import generate_qr
+from validators.report_validator import validate_report
 from verification.html_generator import generate_verification_page
-
 
 CONDITION_COUNTS = {
     "Normal": 10,

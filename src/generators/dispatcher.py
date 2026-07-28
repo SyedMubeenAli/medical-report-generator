@@ -1,10 +1,9 @@
-from generators.normal import generate_normal
 from generators.iron_deficiency import generate_iron_deficiency
 from generators.leukocytosis import generate_leukocytosis
 from generators.leukopenia import generate_leukopenia
-from generators.viral_infection import generate_viral_infection
+from generators.normal import generate_normal
 from generators.thrombocytopenia import generate_thrombocytopenia
-
+from generators.viral_infection import generate_viral_infection
 
 GENERATOR_MAP = {
 

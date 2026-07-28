@@ -1,6 +1,5 @@
 import joblib
 
-
 MODEL_PATH = "src/models/cbc_model.pkl"
 ENCODER_PATH = "src/models/label_encoder.pkl"
 GENDER_ENCODER_PATH = "src/models/gender_encoder.pkl"

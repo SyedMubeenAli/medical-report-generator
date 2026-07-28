@@ -1,5 +1,5 @@
-from patient_generator import generate_patient
 from cbc_generator import generate_cbc
+from patient_generator import generate_patient
 from report_formatter import format_report
 
 patient = generate_patient(1)

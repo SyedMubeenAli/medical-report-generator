@@ -1,9 +1,5 @@
-from reportlab.platypus import (
-    Table,
-    TableStyle
-)
-
 from reportlab.lib import colors
+from reportlab.platypus import Table, TableStyle
 
 
 def create_patient_table(report):

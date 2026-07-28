@@ -1,7 +1,7 @@
 import random
 
-from patient_generator import generate_patient
 from cbc_reference import CBC_REFERENCE
+from patient_generator import generate_patient
 
 
 def random_float(low, high, digits=1):

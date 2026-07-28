@@ -1,16 +1,15 @@
 from dataclasses import dataclass
-from typing import Dict, List
 
 
 @dataclass
 class Report:
 
-    patient: Dict
+    patient: dict
 
     condition: str
 
     severity: str
 
-    abnormal_parameters: List[str]
+    abnormal_parameters: list[str]
 
-    cbc: Dict
+    cbc: dict

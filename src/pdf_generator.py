@@ -1,19 +1,13 @@
 from reportlab.lib.pagesizes import A4
-from reportlab.platypus import (
-    SimpleDocTemplate,
-    Paragraph,
-    Spacer
-)
 from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import Image, Paragraph, SimpleDocTemplate, Spacer
 
-from template_manager import create_patient_table
-from pdf_components import create_diagnosis_section
-from pdf.sections import add_header
 from pdf.cbc_table import create_cbc_table
-
-from reportlab.platypus import Image
-from qr_generator import generate_qr
 from pdf.footer import add_footer
+from pdf.sections import add_header
+from pdf_components import create_diagnosis_section
+from qr_generator import generate_qr
+from template_manager import create_patient_table
 
 
 def generate_pdf(report):

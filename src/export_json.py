@@ -1,8 +1,8 @@
 import json
-
 from pathlib import Path
 
 from report_formatter import format_report
+
 
 def export_reports_to_json(reports):
 

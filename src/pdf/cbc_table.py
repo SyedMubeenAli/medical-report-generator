@@ -1,5 +1,5 @@
-from reportlab.platypus import Table, TableStyle
 from reportlab.lib import colors
+from reportlab.platypus import Table, TableStyle
 
 from report_formatter import format_report
 

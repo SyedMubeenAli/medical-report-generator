@@ -1,16 +1,10 @@
 import pandas as pd
 
 from src.ai.analyzer import analyze_cbc
-from src.ai.explanation import generate_explanation
-from src.ai.model_loader import (
-    model,
-    label_encoder,
-    gender_encoder
-)
 from src.ai.confidence import get_confidence_level
-
+from src.ai.explanation import generate_explanation
 from src.ai.feature_importance import get_feature_importance
-
+from src.ai.model_loader import gender_encoder, label_encoder, model
 
 FEATURE_ORDER = [
     "Age",
