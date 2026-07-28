@@ -24,3 +24,6 @@ settings = Settings()
 
 JSON_PATH = Path(settings.JSON_FOLDER)
 LOG_PATH = Path(settings.LOG_FOLDER)
+
+JSON_PATH.mkdir(parents=True, exist_ok=True)
+LOG_PATH.mkdir(parents=True, exist_ok=True)
