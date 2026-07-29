@@ -66,3 +66,6 @@ clean_env/
 .env
 .env.*
 !.env.example
+
+assets/qr/*.png
+!assets/qr/.gitkeep
