@@ -107,5 +107,6 @@ def health():
     return {
         "status": "healthy",
         "service": "AI-Powered Medical Report Generator API",
-        "api_version": settings.API_VERSION,
+        "api_version": "v1",
+        "version": settings.API_VERSION,
     }
