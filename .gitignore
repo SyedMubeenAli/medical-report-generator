@@ -61,3 +61,8 @@ clean_env/
 
 # Python bytecode
 *.pyc
+
+
+.env
+.env.*
+!.env.example
